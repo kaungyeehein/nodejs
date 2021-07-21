@@ -80,3 +80,21 @@
 [👆 မာတိကာသို့](#မာတိကာ)
 
 ## (၁) NodeJS မိတ်ဆက်
+
+NodeJS ဆိုသည်မှာ V8 JavaScript Engine ကို အသုံးပြုထားပြီး JavaScript ကို server side တွင် အသုံးပြုလို့ရအောင် ပြုလုပ်ပေးသော runtime environment တစ်ခုဖြစ်သည်။ NodeJS သည် open-source ဖြစ်ပြီး၊ မည်သည့် operating system တွင်မဆို အသုံးပြုနိုင်သော cross-platform အမျိုးအစားလဲ ဖြစ်ပါသည်။ ထိုကြောင့် NodeJS ကိုလေ့လာမည်ဆိုပါက JavaScript ကို သိရှိနားလည်ထားဖို့ လိုအပ်ပါသည်။
+
+### NodeJS ကိုထည့်သွင်းခြင်း
+
+NodeJS ကိုထည့်သွင်းရန် `https://nodejs.org/` သို့သွားရောက်၍ download ပြုလုပ်ပြီး၊ install လုပ်ပါ။ NodeJS ကို install ပြုလုပ်ပါက `node` နှင့် `npm` ထည့်သွင်းသွားမည်ဖြစ်သည်။ `node` သည် NodeJS run ပေးသော command ဖြစ်ပြီး၊ `npm` သည် NodeJS နှင့် ဆက်စပ်နေသော package များကို install လုပ်ပေးသော command ဖြစ်သည်။
+
+Install ပြုလုပ်ထားသော `node` နှင့် `npm` ၏ version များကို အောက်ပါအတိုင်း စစ်ဆေးနိုင်ပါသည်။
+```
+npm -v
+node -v
+```
+
+NodeJS ကို နောက်ဆုံး version သို့ မြှင့်တင်ချင်ပါက အောက်ပါအတိုင်း ပြုလုပ်နိုင်ပါသည်။
+```
+sudo npm i -g npm
+sudo npm i -g n
+```
