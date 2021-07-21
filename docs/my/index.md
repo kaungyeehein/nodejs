@@ -85,7 +85,7 @@ NodeJS ဆိုသည်မှာ V8 JavaScript Engine ကို အသုံ�
 
 ### NodeJS ကိုထည့်သွင်းခြင်း
 
-NodeJS ကိုထည့်သွင်းရန် `https://nodejs.org/` သို့သွားရောက်၍ download ပြုလုပ်ပြီး၊ install လုပ်ပါ။ NodeJS ကို install ပြုလုပ်ပါက `node` နှင့် `npm` ထည့်သွင်းသွားမည်ဖြစ်သည်။ `node` သည် NodeJS run ပေးသော command ဖြစ်ပြီး၊ `npm` သည် NodeJS နှင့် ဆက်စပ်နေသော package များကို install လုပ်ပေးသော command ဖြစ်သည်။
+NodeJS ကိုထည့်သွင်းရန် https://nodejs.org/ သို့သွားရောက်၍ download လုပ်ပြီး၊ install ပြုလုပ်ပါ။ NodeJS ကို install ပြုလုပ်ပါက `node` နှင့် `npm` ကို အလိုအလျောက် ထည့်သွင်းသွားမည် ဖြစ်သည်။ `node` သည် NodeJS run ပေးသော command ဖြစ်ပြီး၊ `npm` သည် NodeJS နှင့် ဆက်စပ်နေသော package များကို install လုပ်ပေးသော command ဖြစ်သည်။
 
 Install ပြုလုပ်ထားသော `node` နှင့် `npm` ၏ version များကို အောက်ပါအတိုင်း စစ်ဆေးနိုင်ပါသည်။
 ```
