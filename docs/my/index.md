@@ -1,5 +1,7 @@
 # ကိုကောင်း၏ NodeJS မှတ်စု
 
+Language: [EN](../en/)|MY
+
 ## မာတိကာ
 
 1. [NodeJS မိတ်ဆက်](#၁-nodejs-မိတ်ဆက်)
@@ -100,6 +102,7 @@ VScode ကိုထည့်သွင်းရန် [https://code.visualstudio.
 * MarkdownLint (Markdown file များကိုရေးရာတွင် code highlight လုပ်ရန်)
 * DotENV (DotENV file ကိုရေးရာတွင် code highlight လုပ်ရန်)
 * REST Client (REST API ရေးရာတွင် code များကို VScode ထဲတွင် စစ်ဆေးနိုင်ရန်)
+* ESLint (Code syntax များ စစ်ဆေးရန်)
 
 စသည်ဖြင့် အသုံးဝင်သော extensions ပေါင်းများစွာရှိပါသည်။ အခြားလိုအပ်သော extensions များလည်း ရှာဖွေထည့်သွင်း အသုံးပြုနိုင်ပါသည်။
 
