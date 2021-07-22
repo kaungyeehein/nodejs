@@ -259,6 +259,11 @@ fs.open('/Users/joe/test.txt', 'r', (err, fd) => {
 });
 ```
 
+ယခုရှင်းပြသော NodeJS အခြေခံများကို အသေးစိတ် သိရှိလိုပါက အောက်ဖေါ်ပြပါ website တွင် ဆက်လက်လေ့လာပါရန် တိုက်တွန်းပါသည်။
+
+* [https://nodejs.dev/learn](https://nodejs.dev/learn)
+* [https://nodeschool.io/](https://nodeschool.io/)
+
 [👆 မာတိကာသို့](#မာတိကာ)
 
 ---
