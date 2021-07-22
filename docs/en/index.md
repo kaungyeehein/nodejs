@@ -1,6 +1,6 @@
 # Kaung's NodeJS Note
 
-Language: EN|[MY](../my/)
+Language: EN|[MY](../my/index.md)
 
 ## Contents
 
