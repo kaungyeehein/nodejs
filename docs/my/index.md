@@ -90,12 +90,13 @@ node app.js
 
 ### (၄) VScode အသုံးပြုခြင်း
 
-Application များကို nodepad သို့မဟုတ် နှစ်သက်ရာ IDE အသုံးပြု၍ ပြုလုပ်နိုင်ပါသည်။ သို့သော် Microsoft ကပြုလုပ်ထားသော Visual Studio Code Editor (VScode) ကို အသုံးပြုရန် အကြံပေးပါသည်။ JavaScript development အတွက် လိုအပ်သော၊ ကောင်းမွန်သော extensions ပေါင်းများစွာ VScode တွင်ရှိသောကြောင့် ဖြစ်ပါသည်။
+Application များကို nodepad သို့မဟုတ် နှစ်သက်ရာ IDE အသုံးပြု၍ ရေးသားနိုင်ပါသည်။ သို့သော် Microsoft ကပြုလုပ်ထားသော Visual Studio Code Editor (VScode) ကို အသုံးပြုရန် အကြံပေးပါသည်။ JavaScript development အတွက် လိုအပ်သော၊ ကောင်းမွန်သော extensions ပေါင်းများစွာ VScode တွင်ရှိသောကြောင့် ဖြစ်ပါသည်။ Sublime Text ကဲ့သို့သော editing feature များ၊ file auto saving feature များ စသည်ဖြင့် အသုံးဝင်သော feature ပေါင်းများစွာလဲ ရှိပါသည်။
+
 VScode ကိုထည့်သွင်းရန် [https://code.visualstudio.com](https://code.visualstudio.com) သို့သွားရောက်၍ download လုပ်ပြီး၊ install ပြုလုပ်ပါ။ Install ပြုလုပ်ပြီးပါက အောက်ပါ extensions များကိုလည်း ထည့်သွင်းပါ။
 
 * Material Icon Theme (Project directory ထဲတွင် file များ၊ directory များကို လွယ်ကူစွာ မြင်နိုင်ရန်)
 * Bracket Pair Colorizer 2 (Program ထဲတွင် အဖွင့်/အပိတ် ကွင်းများကို လွယ်ကူစွာ မြင်နိုင်ရန်)
-* Import Cost (JavaScript တွင် Import/Require လုပ်ထားသော package များ၏ size ကိုသိရန်)
+* Import Cost (JavaScript တွင် import/require လုပ်ထားသော package များ၏ size ကိုသိရန်)
 * MarkdownLint (Markdown file များကိုရေးရာတွင် code highlight လုပ်ရန်)
 * DotENV (DotENV file ကိုရေးရာတွင် code highlight လုပ်ရန်)
 * REST Client (REST API ရေးရာတွင် code များကို VScode ထဲတွင် စစ်ဆေးနိုင်ရန်)
