@@ -158,7 +158,7 @@ JavaScript သည် default အားဖြင့် asynchronous ပုံစ�
 
 #### Promises
 
-Promises သည် timer ကဲ့သို့ call stack အဆုံးထိ ဆောင့်စရာမလိုပဲ တက်နို်င်သလောက် မြန်မြန် ပြုလုပ်ပေးနိုင်သော ရေးနည်းဖြစ်သည်။ ထို့အပြင် promises များကို တစ်ခုနှင့် တစ်ခု ချိန်ဆက်ပြီး chain လိုမျိုး ရေးသားနိုင်သေးသည်။
+Promises သည် timer ကဲ့သို့ call stack အဆုံးထိ ဆောင့်စရာမလိုပဲ တက်နိုင်သလောက် မြန်မြန် ပြုလုပ်ပေးနိုင်သော ရေးနည်းဖြစ်သည်။ ထို့အပြင် promises များကို တစ်ခုနှင့် တစ်ခု ချိန်ဆက်ပြီး chain လိုမျိုး ရေးသားနိုင်သေးသည်။
 ```javascript
 const funA = () => console.log('Function A');
 const funB = () => console.log('Function B');
@@ -210,7 +210,7 @@ Before
 After
 Do something after 3sec
 ```
-`async` လို function အား သက်မှတ်လိုက်ချင်းသည် ၎င်း function သည် promise ကို return ပြန်နိုင်သည်ဟု ဖေါ်ပြခြင်းဖြစ်သည်။ `await` keyword ဖြင့် async function များကို ခေါ်ရာတွင်လဲ ၎င်း function မှာ promise သို့မဟုတ် reject ကို return ပြန်မရမခြင်း ရပ်နေမည်ဖြစ်သည်။
+`async` လို function အား သက်မှတ်လိုက်ချင်းသည် ၎င်း function သည် promise ကို return ပြန်နိုင်သည်ဟု ဖေါ်ပြခြင်းဖြစ်သည်။ `await` keyword ဖြင့် async function များကို ခေါ်ရာတွင်လဲ ၎င်း function မှာ resolve သို့မဟုတ် reject ကို return ပြန်မရမခြင်း ရပ်နေမည်ဖြစ်သည်။
 
 အောက်ပါ ဥပမာတွင် Promise change ကိုအသုံးပြု၍ json data ကိုရယူထားခြင်းဖြစ်သည်။
 ```javascript
