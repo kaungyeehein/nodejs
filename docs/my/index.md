@@ -237,6 +237,27 @@ const getFirstUserData = async () => {
 
 getFirstUserData();
 ```
+Asynchronous function များသည် debug လိုက်ဖို့ခက်ခဲပေမဲ့လည်း ထိုသို့ async/await ပုံစံ ပြောင်းရေးပါက synchronous function လို debug လိုက်ဖို့ လွယ်ကူလာတာကို တွေ့ရမည် ဖြစ်ပါသည်။
+
+နောက် ဥပမာ တစ်ခုတွင် file တစ်ခုအား ဖွင့်ပုံကို synchronous ပုံစံ ရေးပြပါမည်။
+```javascript
+const fs = require('fs');
+
+try {
+  const fd = fs.openSync('/Users/joe/test.txt', 'r');
+  // Other task must be run after this function finish
+} catch (err) {
+  console.error(err);
+}
+```
+ထို code ပုံစံအတိုင်း file တစ်ခုအား ဖွင့်ပုံကို asynchronous ပုံစံ ရေးပြပါမည်။
+```javascript
+const fs = require('fs');
+
+fs.open('/Users/joe/test.txt', 'r', (err, fd) => {
+  // Other task don't wait to run after this function
+});
+```
 
 [👆 မာတိကာသို့](#မာတိကာ)
 
