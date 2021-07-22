@@ -7,4 +7,4 @@ Please get start from here
 
 or
 
-[https://github.com/kaungyeehein/nodejs](blob/main/docs/index.md)
+[https://github.com/kaungyeehein/nodejs](docs/index.md)
