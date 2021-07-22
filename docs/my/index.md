@@ -114,7 +114,10 @@ VScode ကိုထည့်သွင်းရန် [https://code.visualstudio.
 ### (၅) NodeJS အခြေခံ
 
 NodeJS တွင် အရေးပါသော လုပ်ဆောင်ချက်မှာ Non-blocking I/O ဖြစ်ပါတယ်။ JavaScript သည် single threaded ပေါ်တွင် parallel processing ပြုလုပ်နိုင်သော language ဖြစ်သည်။ ပထမ အလုပ် ပြီးမြောက်အောင် စောင့်စရာမလိုပဲ မပြီးခင်မှာ ဒုတိယ အလုပ်ကို ဆက်လက် လုပ်ဆောင်နိုင်ခြင်းဖြစ်သည်။ ဥပမာ Network ပေါ်က အကြောင်းအရာ တစ်ခုခုကို တောင်းဆိုနေချိန်တွင် အခြားအလုပ်များကို ဆက်လက်လုပ်ဆောင် နိုင်ခြင်းဖြစ်သည်။ ထိုသို့ပုံစံများကို JavaScript တွင် callback function များဖြင့် ရေးသားနိုင်ပါသည်။ အောက်ပါ နာမူနာ code ကို ကြည့်ပါ။
-```JavaScript
+
+#### Callback
+
+```javascript
 console.log('Before');
 window.addEventListener('load', () => {
   //window loaded
@@ -128,7 +131,64 @@ Before
 After
 Window loaded
 ```
-After ကို output ထုတ်ပြဖို့အတွက် window ကို loading ပြီးသည်အထိ စောင့်စရာမလိုပဲ ဆက်လက်လုပ်ဆောင်နိုင်ရန် callback အား arrow function အသုံးပြု၍ ရေးသားထားခြင်း ဖြစ်ပါသည်။ Window loading ပြီးမြောက်ပါက callback function က အလုပ်လုပ်မည် ဖြစ်ပါသည်။
+After ကို output ထုတ်ပြဖို့အတွက် window ကို loading ပြီးသည်အထိ စောင့်စရာမလိုပဲ ဆက်လက်လုပ်ဆောင်နိုင်ရန် callback အား arrow function အသုံးပြု၍ ရေးသားထားခြင်း ဖြစ်ပါသည်။ Window loading ပြီးမြောက်ပါက callback function က အလုပ်လုပ်မည် ဖြစ်ပါသည်။ နောက်ထပ် ဥပမာ တစ်ခုထပ်ကြည့်ရအောင်။
+
+#### Timer
+
+```javascript
+const funA = () => console.log('Function A');
+const funB = () => console.log('Function B');
+const funC = () => {
+	console.log('Function C');
+	setTimeout(funA, 0);
+	funB();
+};
+
+funC();
+```
+ထို JavaScript code ကို browser တွင် run ကြည့်ပါက အောက်ပါအတိုင်း output ကိုရမည် ဖြစ်သည်။
+```
+Function C
+Function B
+Function A
+```
+Timer function တွင် funA ကို ချက်ချင်းအလုပ်လုပ်ရန် 0 (zero) timer ထားပြီး ခေါ်သော်လည်း၊ funB အလုပ်ပြီးမှ funA ကို ခေါ်သည်ကို တွေ့မြင်ရပါသည်။ အဘယ့်ကြောင့်ဆိုသော် Timer function သည် JavaScript ၏ call stack ထဲတွင် လုပ်စရာမရှိတော့မှ နောက်ဆုံး လုပ်ပေးသောကြောင့် ဖြစ်သည်။
+
+JavaScript သည် default အားဖြင့် asynchronous ပုံစံဖြစ်ပြီး၊ synchronous ပုံစံ ရေးသားလိုပါက callback function ထဲတွင် ထည့်သွင်းရေးသား နိုင်ပါသည်။ သို့သော် Callback function ထဲတွင်လည်း callback function များ ထပ်ခါထပ်ခါ ရေးသားပါက နားလည်ရ ခတ်ခဲလာနိုင်ပါသည်။ ထိုပြဿနာကို ပြေလည်နိုင်ရန် ES6 တွင် Promises ရေးထုံးကို ထည့်သွင်းလာခဲ့ပါသည်။
+
+#### Promises
+
+Promises သည် timer ကဲ့သို့ call stack အဆုံးထိ ဆောင့်စရာမလိုပဲ တက်နို်င်သလောက် မြန်မြန် ပြုလုပ်ပေးနိုင်သော ရေးနည်းဖြစ်သည်။ ထို့အပြင် promises များကို တစ်ခုနှင့် တစ်ခု ချိန်ဆက်ပြီး chain လိုမျိုး ရေးသားနိုင်သေးသည်။
+```javascript
+const funA = () => console.log('Function A');
+const funB = () => console.log('Function B');
+const funC = () => {
+	console.log('Function C');
+	setTimeout(funA, 0);
+	
+	const p = new Promise((resolve, reject) => {
+		resolve('After funB, Before funA');
+	});
+	p.then(result => console.log(result))
+		.catch(error => console.error(error));
+
+	funB();
+};
+
+funC();
+```
+ထို JavaScript code ကို browser တွင် run ကြည့်ပါက အောက်ပါအတိုင်း output ကိုရမည် ဖြစ်သည်။
+```
+Function C
+Function B
+After funB, Before funA
+Function A
+```
+Promise function p() သည် Timer အသုံးပြုထားသော funA ကဲ့သို့ call stack ဆုံးသည့်အထိ စောင့်စရာ မလိုပဲ အရင်ပြုလုပ်သွားသည်ကို တွေ့မြင်နိုင်မည် ဖြစ်ပါသည်။ Promise function တွင် resolve နှင့် reject ဟူသော parameter နှစ်ခုကိုထည့်ပေးရမည်ဖြစ်သည်။ function ထဲတွင် လုပ်ဆောင်ချက်အောင်မြင်ပါက resolve ကို ခေါ်ရမည်ဖြစ်ပြီး၊ မအောင်မြင်ပါက reject ကိုခေါ်ရမည် ဖြစ်သည်။ ထို promise ကို ပြန်လည်အသုံးပြုလိုပါက then နဲ့ catch ကို အသုံးပြုရမည် ဖြစ်သည်။ then ဖြင့် promise များတစ်ခုမက ချိတ်ဆက် အသုံးပြုနိုင်ပါသည်။ Promise ကိုအသုံးပြုပါက `new` keywoard ဖြင့် `new Promise()` ဟုသာအသုံးပြုလို့ရကြောင်း မှတ်သားစေချင်ပါသည်။
+
+#### Async and Await
+
+ES2017 တွင် Promise ကို ပိုမိုလွယ်ကူအောင် async/await နှင့်ရေးသားနိုင်ပါသည်။ ၎င်း၏ နောက်ကွယ်တွင် promise ကိုပင် အသုံးပြုထားခြင်း ဖြစ်သည်။
 
 [👆 မာတိကာသို့](#မာတိကာ)
 
