@@ -255,7 +255,7 @@ try {
 const fs = require('fs');
 
 fs.open('/Users/joe/test.txt', 'r', (err, fd) => {
-  // Other task don't wait to run after this function
+  // Other task don't wait to run after this function finish
 });
 ```
 
