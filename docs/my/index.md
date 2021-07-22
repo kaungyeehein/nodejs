@@ -12,7 +12,7 @@
 
 ### (၁) NodeJS မိတ်ဆက်
 
-NodeJS ဆိုသည်မှာ V8 JavaScript Engine ကို အသုံးပြုထားပြီး JavaScript ကို server side တွင် အသုံးပြုလို့ရအောင် ပြုလုပ်ပေးသော runtime environment တစ်ခုဖြစ်သည်။ NodeJS သည် open-source ဖြစ်ပြီး၊ မည်သည့် operating system တွင်မဆို အသုံးပြုနိုင်သော cross-platform အမျိုးအစားလဲ ဖြစ်ပါသည်။ NodeJS ကိုလေ့လာမည်ဆိုပါက JavaScript ကို သိရှိနားလည်ထားဖို့ လိုအပ်ပြီး၊ အဓိကအားဖြင့် JavaScript ၏ အောက်ပါအကြောင်းအရာများကို ကြိုတင်လေ့လာထားသင့် ပါသည်။
+NodeJS ဆိုသည်မှာ V8 JavaScript Engine ကို အသုံးပြုထားပြီး JavaScript ကို server side တွင် အသုံးပြုလို့ရအောင် ပြုလုပ်ပေးသော runtime environment တစ်ခုဖြစ်သည်။ V8 ဆိုသည်မှာ Google Chrome Browser တွင် အသုံးပြုထားသော JavaScript Engine ဖြစ်ပါသည်။ NodeJS သည် open-source ဖြစ်ပြီး၊ မည်သည့် operating system တွင်မဆို အသုံးပြုနိုင်သော cross-platform အမျိုးအစားလဲ ဖြစ်ပါသည်။ NodeJS ကိုလေ့လာမည်ဆိုပါက JavaScript ကို သိရှိနားလည်ထားဖို့ လိုအပ်ပြီး၊ အဓိကအားဖြင့် JavaScript ၏ အောက်ပါအကြောင်းအရာများကို ကြိုတင်လေ့လာထားသင့် ပါသည်။
 
 * Lexical Structure
 * Expressions
@@ -71,8 +71,17 @@ mkdir NodeApp
 cd NodeApp
 npm init -y
 ```
-NodeApp directory ကိုပြုလုပ်ပြီး၊ `package.json`file ကိုပါပြုလုပ်သွားမည် ဖြစ်သည်။
+NodeApp directory ကိုပြုလုပ်ပြီး၊ `package.json`file ကို default option များနှင့် ပြုလုပ်သွားမည် ဖြစ်သည်။ `package.json` သည် NodeJS Project အတွက် version သက်မှတ်ခြင်းနှင့် လိုအပ်သော package များထည့်သွင်းရန် အရေးပါသော file ဖြစ်သည်။
 
+Application တစ်ခု တည်ဆောက်ရန် `app.js` အမည်ဖြင့် file တစ်ခုအားပြုလုပ်၍ အောက်ပါအတိုင်း ရေးကြည့်ပါမည်။
+```javascript
+// app.js
+console.log('Hello World!');
+```
+ရေးပြီးသွားပါက `node` command ကိုအသုံးပြုပြီး အောက်ပါတိုင်း run ကြည့်ပါက 'Hello World!' ဆိုသော စာသားကို output အနေဖြင့် မြင်ရမည်ဖြစ်ပါသည်။
+```
+node app.js
+```
 
 [👆 မာတိကာသို့](#မာတိကာ)
 
