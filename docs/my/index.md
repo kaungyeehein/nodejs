@@ -139,9 +139,9 @@ After ကို output ထုတ်ပြဖို့အတွက် window က�
 const funA = () => console.log('Function A');
 const funB = () => console.log('Function B');
 const funC = () => {
-	console.log('Function C');
-	setTimeout(funA, 0);
-	funB();
+  console.log('Function C');
+  setTimeout(funA, 0);
+  funB();
 };
 
 funC();
@@ -163,16 +163,16 @@ Promises သည် timer ကဲ့သို့ call stack အဆုံးထိ 
 const funA = () => console.log('Function A');
 const funB = () => console.log('Function B');
 const funC = () => {
-	console.log('Function C');
-	setTimeout(funA, 0);
-	
-	const p = new Promise((resolve, reject) => {
-		resolve('After funB, Before funA');
-	});
-	p.then(result => console.log(result))
-		.catch(error => console.error(error));
+  console.log('Function C');
+  setTimeout(funA, 0);
 
-	funB();
+  const p = new Promise((resolve, reject) => {
+    resolve('After funB, Before funA');
+  });
+  p.then(result => console.log(result))
+    .catch(error => console.error(error));
+
+funB();
 };
 
 funC();
