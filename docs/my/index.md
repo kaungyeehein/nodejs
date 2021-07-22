@@ -1,6 +1,6 @@
 # ကိုကောင်း၏ NodeJS မှတ်စု
 
-Language: [EN](../en/)|MY
+Language: MY|[EN](../en/)
 
 ## မာတိကာ
 
@@ -8,6 +8,7 @@ Language: [EN](../en/)|MY
 2. [NodeJS ကိုထည့်သွင်းခြင်း](#၂-nodejs-ကိုထည့်သွင်းခြင်း)
 3. [Project Directory ပြုလုပ်ခြင်း](#၃-project-directory-ပြုလုပ်ခြင်း)
 4. [VSCode အသုံးပြုခြင်း](#၄-vscode-အသုံးပြုခြင်း)
+5. [NodeJS အခြေခံ](#၅-nodejs-အခြေခံ)
 
 [👆 မာတိကာသို့](#မာတိကာ)
 
@@ -105,6 +106,29 @@ VScode ကိုထည့်သွင်းရန် [https://code.visualstudio.
 * ESLint (Code syntax များ စစ်ဆေးရန်)
 
 စသည်ဖြင့် အသုံးဝင်သော extensions ပေါင်းများစွာရှိပါသည်။ အခြားလိုအပ်သော extensions များလည်း ရှာဖွေထည့်သွင်း အသုံးပြုနိုင်ပါသည်။
+
+[👆 မာတိကာသို့](#မာတိကာ)
+
+---
+
+### (၄) NodeJS အခြေခံ
+
+NodeJS တွင် အရေးပါသော လုပ်ဆောင်ချက်မှာ Non-blocking I/O ဖြစ်ပါတယ်။ JavaScript သည် single threaded ပေါ်တွင် parallel processing ပြုလုပ်နိုင်သော language ဖြစ်သည်။ ပထမ အလုပ် ပြီးမြောက်အောင် စောင့်စရာမလိုပဲ မပြီးခင်မှာ ဒုတိယ အလုပ်ကို ဆက်လက် လုပ်ဆောင်နိုင်ခြင်းဖြစ်သည်။ ဥပမာ Network ပေါ်က အကြောင်းအရာ တစ်ခုခုကို တောင်းဆိုနေချိန်တွင် အခြားအလုပ်များကို ဆက်လက်လုပ်ဆောင် နိုင်ခြင်းဖြစ်သည်။ ထိုသို့ပုံစံများကို JavaScript တွင် callback function များဖြင့် ရေးသားနိုင်ပါသည်။ အောက်ပါ နာမူနာ code ကို ကြည့်ပါ။
+```JavaScript
+console.log('Before');
+window.addEventListener('load', () => {
+  //window loaded
+  console.log('Window loaded');
+});
+console.log('After');
+```
+ထို JavaScript code ကို browser တွင် run ကြည့်ပါက အောက်ပါအတိုင်း output ကိုရမည် ဖြစ်သည်။
+```
+Before
+After
+Window loaded
+```
+After ကို output ထုတ်ပြဖို့အတွက် window ကို loading ပြီးသည်အထိ စောင့်စရာမလိုပဲ ဆက်လက်လုပ်ဆောင်နိုင်ရန် callback အား arrow function အသုံးပြု၍ ရေးသားထားခြင်း ဖြစ်ပါသည်။ Window loading ပြီးမြောက်ပါက callback function က အလုပ်လုပ်မည် ဖြစ်ပါသည်။
 
 [👆 မာတိကာသို့](#မာတိကာ)
 
