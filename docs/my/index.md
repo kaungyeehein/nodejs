@@ -154,11 +154,11 @@ Function A
 ```
 Timer function တွင် funA ကို ချက်ချင်းအလုပ်လုပ်ရန် 0 (zero) timer ထားပြီး ခေါ်သော်လည်း၊ funB အလုပ်ပြီးမှ funA ကို ခေါ်သည်ကို တွေ့မြင်ရပါသည်။ အဘယ့်ကြောင့်ဆိုသော် Timer function သည် JavaScript ၏ call stack ထဲတွင် လုပ်စရာမရှိတော့မှ နောက်ဆုံး လုပ်ပေးသောကြောင့် ဖြစ်သည်။
 
-JavaScript သည် default အားဖြင့် asynchronous ပုံစံဖြစ်ပြီး၊ synchronous ပုံစံ ရေးသားလိုပါက callback function ထဲတွင် ထည့်သွင်းရေးသား နိုင်ပါသည်။ သို့သော် Callback function ထဲတွင်လည်း callback function များ ထပ်ခါထပ်ခါ ရေးသားပါက နားလည်ရ ခတ်ခဲလာနိုင်ပါသည်။ ထိုပြဿနာကို ပြေလည်နိုင်ရန် ES6 တွင် Promises ရေးထုံးကို ထည့်သွင်းလာခဲ့ပါသည်။
+JavaScript သည် default အားဖြင့် asynchronous ပုံစံဖြစ်ပြီး၊ synchronous ပုံစံ ရေးသားလိုပါက callback function ထဲတွင် ထည့်သွင်းရေးသား နိုင်ပါသည်။ သို့သော် Callback function ထဲတွင်လည်း callback function များ ထပ်ခါထပ်ခါ ရေးသားပါက နားလည်ရ ခက်ခဲလာနိုင်ပါသည်။ ထိုပြဿနာကို ပြေလည်နိုင်ရန် ES6 တွင် Promises ရေးထုံးကို ထည့်သွင်းလာခဲ့ပါသည်။
 
 #### Promises
 
-Promises သည် timer ကဲ့သို့ call stack အဆုံးထိ ဆောင့်စရာမလိုပဲ တက်နိုင်သလောက် မြန်မြန် ပြုလုပ်ပေးနိုင်သော ရေးနည်းဖြစ်သည်။ ထို့အပြင် promises များကို တစ်ခုနှင့် တစ်ခု ချိန်ဆက်ပြီး chain လိုမျိုး ရေးသားနိုင်သေးသည်။
+Promises သည် timer ကဲ့သို့ call stack အဆုံးထိ စောင့်စရာမလိုပဲ တက်နိုင်သလောက် မြန်မြန် ပြုလုပ်ပေးနိုင်သော ရေးနည်းဖြစ်သည်။ ထို့အပြင် promises များကို တစ်ခုနှင့် တစ်ခု ချိတ်ဆက်ပြီး chain လိုမျိုး ရေးသားနိုင်သေးသည်။
 ```javascript
 const funA = () => console.log('Function A');
 const funB = () => console.log('Function B');
@@ -245,7 +245,7 @@ const fs = require('fs');
 
 try {
   const fd = fs.openSync('/Users/joe/test.txt', 'r');
-  // Other task must be run after this function finish
+  // Other task wait to run after this function finish
 } catch (err) {
   console.error(err);
 }
