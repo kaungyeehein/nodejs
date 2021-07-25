@@ -9,7 +9,7 @@ Language: MY|[EN](../en/index.md)
 3. [Project Directory ပြုလုပ်ခြင်း](#၃-project-directory-ပြုလုပ်ခြင်း)
 4. [VSCode အသုံးပြုခြင်း](#၄-vscode-အသုံးပြုခြင်း)
 5. [NodeJS အခြေခံ](#၅-nodejs-အခြေခံ)
-6. [Import Export Module](#၆-import-export-module)
+6. [Module များခွဲထုတ်ရေးသားခြင်း](#၆-module-များခွဲထုတ်ရေးသားခြင်း)
 
 [👆 မာတိကာသို့](#မာတိကာ)
 
@@ -269,11 +269,11 @@ fs.open('/Users/joe/test.txt', 'r', (err, fd) => {
 
 ---
 
-### (၆) Import Export Module
+### (၆) Module များခွဲထုတ်ရေးသားခြင်း
 
-Function များကို ရှင်းလင်းစွာ မြင်နိုင်ရန်နှင့် ထပ်ခါထပ်ခါ အသုံးပြုနိုင်ရန် module များခွဲထုတ်၍ export လုပ်ထားပြီး၊ အခြားတစ်ခုမှ import လုပ်ကာ ပြန်လည်အသုံးပြုနိုင်ပါသည်။ အမှတ်မှားတက်သည်မှာ client side JavaScript တွင် ရေးသော ES6 import export ရေးထုံးနှင့် NodeJS တွင် ရေးသော CommonJS import export ရေးထုံး ကိုမှားယွင်း မှတ်သားတက်ကြပါသည်။ ပထမဦးစွာ client side Javascript တွင် သုံးသော ES6 import export ကိုလေ့လာကြည့်ရအောင်။
+Function များကို ရှင်းလင်းစွာ မြင်နိုင်ရန်နှင့် ထပ်ခါထပ်ခါ အသုံးပြုနိုင်ရန် module များခွဲထုတ်၍ export လုပ်ထားပြီး၊ အခြားတစ်ခုမှ import လုပ်ကာ ပြန်လည်အသုံးပြုနိုင်ပါသည်။ အမှတ်မှားတက်သည်မှာ client side JavaScript တွင် ရေးသော ES6 export import ရေးထုံးနှင့် NodeJS တွင် ရေးသော CommonJS exports require ရေးထုံး ကိုမှားယွင်း မှတ်သားတက်ကြပါသည်။ ပထမဦးစွာ client side Javascript တွင် သုံးသော ES6 import export ကိုလေ့လာကြည့်ရအောင်။
 
-#### ES6 Import Export (Client Side JS)
+#### ES6 Export Import (Client Side JS)
 
 Variable name, function name, class name များ၏ ရှေ့တွင် `export` keyword ကိုရေး၍ export ပြုလုပ်နိုင်ပါသည်။ Module တစ်ခုတွင် `export` များစွာ ကြေငြာနိုင်သော်လဲ၊ `default` တစ်ခုသာ ကြေငြာနိုင်ပါသည်။
 ```javascript
@@ -305,7 +305,7 @@ hello();
 world();
 ```
 
-#### CommonJS Import Export (NodeJS)
+#### CommonJS Exports Require (NodeJS)
 
 NodeJS မှာတော့ CommonJS Import Export ရေးထုံးသာ အသုံးပြုလို့ရမယ်လို့ မှတ်သားထားရမှာ ဖြစ်ပါတယ်။ ES6 မှာလို့ `export` မဟုတ်ဘဲ `exports` မှာ (s) ပါတာကို သတိထားရမှာ ဖြစ်ပါတယ်။ ၎င်း `exports` သည် module object မှလာတာဖြစ်ပြီး၊ default export လည်းမရှိသည်ကို သတိပြုရမည် ဖြစ်ပါသည်။
 ```javascript
