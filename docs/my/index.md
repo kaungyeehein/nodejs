@@ -271,7 +271,7 @@ fs.open('/Users/joe/test.txt', 'r', (err, fd) => {
 
 ### (၆) Module များခွဲထုတ်ရေးသားခြင်း
 
-Function များကို ရှင်းလင်းစွာ မြင်နိုင်ရန်နှင့် ထပ်ခါထပ်ခါ အသုံးပြုနိုင်ရန် module များခွဲထုတ်၍ export လုပ်ထားပြီး၊ အခြားတစ်ခုမှ import လုပ်ကာ ပြန်လည်အသုံးပြုနိုင်ပါသည်။ အမှတ်မှားတက်သည်မှာ client side JavaScript တွင် ရေးသော ES6 export import ရေးထုံးနှင့် NodeJS တွင် ရေးသော CommonJS exports require ရေးထုံး ကိုမှားယွင်း မှတ်သားတက်ကြပါသည်။ ပထမဦးစွာ client side Javascript တွင် သုံးသော ES6 import export ကိုလေ့လာကြည့်ရအောင်။
+Function များကို ရှင်းလင်းစွာ မြင်နိုင်ရန်နှင့် ထပ်ခါထပ်ခါ အသုံးပြုနိုင်ရန် module များခွဲထုတ်၍ export လုပ်ထားပြီး၊ အခြားတစ်ခုမှ import လုပ်ကာ ပြန်လည်အသုံးပြုနိုင်ပါသည်။ အမှတ်မှားတက်သည်မှာ client side JavaScript တွင် ရေးသော ES6 export import ရေးထုံးနှင့် NodeJS တွင် ရေးသော CommonJS exports require ရေးထုံး ကိုမှားယွင်း မှတ်သားတက်ကြပါသည်။ ပထမဦးစွာ client side Javascript တွင် သုံးသော ES6 export import ကိုလေ့လာကြည့်ရအောင်။
 
 #### ES6 Export Import (Client Side JS)
 
