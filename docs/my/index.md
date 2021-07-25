@@ -9,6 +9,7 @@ Language: MY|[EN](../en/index.md)
 3. [Project Directory ပြုလုပ်ခြင်း](#၃-project-directory-ပြုလုပ်ခြင်း)
 4. [VSCode အသုံးပြုခြင်း](#၄-vscode-အသုံးပြုခြင်း)
 5. [NodeJS အခြေခံ](#၅-nodejs-အခြေခံ)
+6. [Import Export Module](#၆-import-export-module)
 
 [👆 မာတိကာသို့](#မာတိကာ)
 
@@ -263,6 +264,85 @@ fs.open('/Users/joe/test.txt', 'r', (err, fd) => {
 
 * [https://nodejs.dev/learn](https://nodejs.dev/learn)
 * [https://nodeschool.io/](https://nodeschool.io/)
+
+[👆 မာတိကာသို့](#မာတိကာ)
+
+---
+
+### (၆) Import Export Module
+
+Function များကို ရှင်းလင်းစွာ မြင်နိုင်ရန်နှင့် ထပ်ခါထပ်ခါ အသုံးပြုနိုင်ရန် module များခွဲထုတ်၍ export လုပ်ထားပြီး၊ အခြားတစ်ခုမှ import လုပ်ကာ ပြန်လည်အသုံးပြုနိုင်ပါသည်။ အမှတ်မှားတက်သည်မှာ client side JavaScript တွင် ရေးသော ES6 import export ရေးထုံးနှင့် NodeJS တွင် ရေးသော CommonJS import export ရေးထုံး ကိုမှားယွင်း မှတ်သားတက်ကြပါသည်။ ပထမဦးစွာ client side Javascript တွင် သုံးသော ES6 import export ကိုလေ့လာကြည့်ရအောင်။
+
+#### ES6 Import Export (Client Side JS)
+
+Variable name, function name, class name များ၏ ရှေ့တွင် `export` keyword ကိုရေး၍ export ပြုလုပ်နိုင်ပါသည်။ Module တစ်ခုတွင် `export` များစွာ ကြေငြာနိုင်သော်လဲ၊ `default` တစ်ခုသာ ကြေငြာနိုင်ပါသည်။
+```javascript
+// greeting.js
+export default function hello() {
+  console.log('Hello');
+}
+export function world() {
+  console.log('World!');
+}
+```
+ထိုကဲ့သို့ မရေးပဲ အောက်တွင် သီးသန့် export {} ရေး၍လည်း ပြုလုပ်နိုင်ပါသေးသည်။
+```javascript
+// greeting.js
+function hello() {
+  console.log('Hello');
+}
+function world() {
+  console.log('World!');
+}
+
+export { hello as default, world };
+```
+ထိုကဲ့သို့ export လုပ်ထားသော `greeting.js` module ကို import ပြုလုပ်၍ ပြန်လည် အသုံးပြုပြပါမည်။ Default export ကို ဒီအတိုင်း ရှေ့ဆုံးတွင် import လုပ်နိုင်သော်လဲ၊ ရိုးရိုး named export သီးသန့်ကိုတော့ တွန့်ကွင်း {} ထဲတွင်ထည့်၍ import လုပ်ယူရမည် ဖြစ်သည်။
+```javascript
+import hello, { world } from "./greeting.js";
+
+hello();
+world();
+```
+
+#### CommonJS Import Export (NodeJS)
+
+NodeJS မှာတော့ CommonJS Import Export ရေးထုံးသာ အသုံးပြုလို့ရမယ်လို့ မှတ်သားထားရမှာ ဖြစ်ပါတယ်။ ES6 မှာလို့ `export` မဟုတ်ဘဲ `exports` မှာ (s) ပါတာကို သတိထားရမှာ ဖြစ်ပါတယ်။ ၎င်း `exports` သည် module object မှလာတာဖြစ်ပြီး၊ default export လည်းမရှိသည်ကို သတိပြုရမည် ဖြစ်ပါသည်။
+```javascript
+// greeting.js
+exports.hello = function() {
+  console.log('Hello');
+};
+exports.world = function() {
+  console.log('World!');
+}
+```
+ထိုကဲ့သို့ မရေးပဲ အောက်တွင် သီးသန့် module.exports = {} ရေး၍လည်း ပြုလုပ်နိုင်ပါသေးသည်။
+```javascript
+// greeting.js
+function hello() {
+  console.log('Hello');
+}
+function world() {
+  console.log('World!');
+}
+
+module.exports = { hello, world }; 
+```
+ထိုကဲ့သို့ export လုပ်ထားသော `greeting.js` module ကို import ပြုလုပ်၍ ပြန်လည် အသုံးပြုပြပါမည်။ ES6 မှာလို import key ကို အသုံးမပြုပဲ require() function ကိုသာ အသုံးပြုနိုင်ကြောင်း မှတ်သားထားရပါမည်။ Import သွင်းလိုသော module ကို variable တစ်ခုနှင့် assign လုပ်ထားရမည်ဖြစ်ပြီး၊ အသုံးပြုလိုပါက variable.function() ပုံစံဖြင့် ခေါ်ယူအသုံးပြုရမှာဖြစ်ပါသည်။
+```javascript
+const greeting = require('./greeting.js');
+
+greeting.hello();
+greeting.world();
+```
+ထိုကဲ့သို မခေါ်ချင်ဘဲ တိုက်ရိုက် အသုံးပြုလိုပါက object destructuring ပြုလုပ်၍ အသုံးပြုရမည် ဖြစ်ပါသည်။ အသုံးပြုပုံမှာ တွန့်ကွင်း {} ကိုအသုံးပြု၍ module ထဲမှာ import လုပ်ချင်သော function ကို တိုက်ရိုက် ခေါ်သုံးခြင်း ဖြစ်ပါသည်။
+```javascript
+const {hello, world} = require('./greeting.js');
+
+hello();
+world();
+```
 
 [👆 မာတိကာသို့](#မာတိကာ)
 
