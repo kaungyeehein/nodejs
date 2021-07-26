@@ -108,6 +108,14 @@ VScode ကိုထည့်သွင်းရန် [https://code.visualstudio.
 
 စသည်ဖြင့် အသုံးဝင်သော extensions ပေါင်းများစွာရှိပါသည်။ အခြားလိုအပ်သော extensions များလည်း ရှာဖွေထည့်သွင်း အသုံးပြုနိုင်ပါသည်။
 
+#### VSCode ကို `code .` command ဖြင့်ဖွင့်ခြင်း
+
+VScode ကို command line ကနေ ဖွင့်လို့ရပါတယ်။ ထိုသို့ပြုလုပ်ဖို့ အရင်ဆုံး VScode ကိုဖွင့်ပါ။ ဖွင့်ပြီပါက command paletten ကိုဖွင့်ရန် (Cmd+Shift+P) ကိုနှိပ်ပါ။ ထိုနောက် `shell command` လိုရိုက်ထည့်ပြီး `Shell Command: Install 'code' command in PATH` ကို ရွေးကာ enter နှိပ်ပါ။ ထိုနောက် VScode ဖွင့်လိုသော project directory အထိ command ကနေသွားပြီး `code .` command ဖြင့် VScode ကို အသုံးပြုနိုင်မှာ ဖြစ်ပါသည်။ အောက်ပါ နမူနာ command ကိုကြည့်ပါ။
+```
+cd NodeApp
+code .
+```
+
 [👆 မာတိကာသို့](#မာတိကာ)
 
 ---
