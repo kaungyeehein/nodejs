@@ -9,7 +9,8 @@ Language: MY|[EN](../en/index.md)
 3. [Project Directory ပြုလုပ်ခြင်း](#၃-project-directory-ပြုလုပ်ခြင်း)
 4. [VSCode အသုံးပြုခြင်း](#၄-vscode-အသုံးပြုခြင်း)
 5. [NodeJS အခြေခံ](#၅-nodejs-အခြေခံ)
-6. [Module များခွဲထုတ်ရေးသားခြင်း](#၆-module-များခွဲထုတ်ရေးသားခြင်း)
+6. [ClientJS Env နှင့် NodeJS Env](#၆-clientjs-env-နှင့်-nodejs-env)
+7. [Module များခွဲထုတ်ရေးသားခြင်း](#၇-module-များခွဲထုတ်ရေးသားခြင်း)
 
 [👆 မာတိကာသို့](#မာတိကာ)
 
@@ -277,7 +278,23 @@ fs.open('/Users/joe/test.txt', 'r', (err, fd) => {
 
 ---
 
-### (၆) Module များခွဲထုတ်ရေးသားခြင်း
+### (၆) ClientJS Env နှင့် NodeJS Env
+
+JavaScript language တစ်ခုထဲ အသုံးပြုပေမဲ့ သုံးတဲ့ environment ပေါ်မှာ မူတည်ပြီး အသုံးပြုပုံ ကွဲပြားတာကို သတိပြုရမည် ဖြစ်ပါသည်။
+
+#### ClientJS Environment
+
+Browser တွင် JavaScript များ အသုံးပြုရာတွင် main object အနေဖြင့် `window` ကိုအသုံးပြုရမည်ဖြစ်ပြီး၊ နာမူနာအားဖြင့် `window.alert()` ၊ `window.document` စသည်ဖြင့် အသုံးပြုရပါသည်။ သို့သော် window အားထည့်မရေးလည်း browser များက auto နားလည်ကြပါသည်။ `window` object သည် client side environment တွင် top level object ဖြစ်ပြီး၊ ၎င်းထဲတွင် လိုအပ်သော properties တွေနဲ့ method တွေရှိပါတယ်။ ဥပမာ Chrome Browser တွင် (command+option+I) ကိုနှိပ်၍ Developer Tools ကိုဖွင့်လိုက်ပါ။ ၎င်း Tools မှ Console တွင် `window` ဟု ရိုက်၍ enter နှိပ်လိုက်ပါက ၎င်း window object ထဲမှရှိသမျှ အားလုံး မြင်ရမှာ ဖြစ်ပါသည်။ `document` ကို ရိုက်ပါက ယခု web apge ၏ elements များအားလုံး ကို မြင်တွေ့ရမှာ ဖြစ်ပါသည်။
+
+#### NodeJS Environment
+
+NodeJS တွင် JavaScript ကို အသုံးပြုရာတွင် main object အနေဖြင့် `global` object ဖြစ်ပြီး client side JavaScript က `window` object နဲ့ဆင်တူပြီး၊ NodeJS မှာသုံးလို့ရတဲ့ properties တွေနဲ့ method တွေရှိပါတယ်။ ၎င်း `global` object ထဲတွင်ရှိသသော `process` object သည် client side JavaScript က `document` object နဲ့ဆင်တူပါသည်။ ၎င်းထဲတွင် module များ၊ config များ၊ environment setting များ စသည်ဖြင့် ပါဝင်ပါသည်။ command line တွင် `node` ဟုရိုက်ထည့်ပါ၊ ထိုနောက် `global` သို့မဟုတ် `process` ဟုရိုက်ထည့်ပြီး စမ်းသပ်ကြည့်ပါက မြင်ရမှာ ဖြစ်ပါသည်။ ထိုကြောင့် NodeJS သည် JavaScript language ဖြစ်သော်လည်း client side JavaScript နှင့် အနည်းငယ်ကွဲပြားခြားနားကြောင်း မှတ်သားထားရမည် ဖြစ်ပါသည်။
+
+[👆 မာတိကာသို့](#မာတိကာ)
+
+---
+
+### (၇) Module များခွဲထုတ်ရေးသားခြင်း
 
 Function များကို ရှင်းလင်းစွာ မြင်နိုင်ရန်နှင့် ထပ်ခါထပ်ခါ အသုံးပြုနိုင်ရန် module များခွဲထုတ်၍ export လုပ်ထားပြီး၊ အခြားတစ်ခုမှ import လုပ်ကာ ပြန်လည်အသုံးပြုနိုင်ပါသည်။ အမှတ်မှားတက်သည်မှာ client side JavaScript တွင် ရေးသော ES6 export import ရေးထုံးနှင့် NodeJS တွင် ရေးသော CommonJS exports require ရေးထုံး ကိုမှားယွင်း မှတ်သားတက်ကြပါသည်။ ပထမဦးစွာ client side Javascript တွင် သုံးသော ES6 export import ကိုလေ့လာကြည့်ရအောင်။
 
