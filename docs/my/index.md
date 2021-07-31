@@ -6,17 +6,17 @@ Language: MY|[EN](../en/index.md)
 
 ### 📒 အပိုင်း (၁)
 
-1. [NodeJS မိတ်ဆက်](./index.md#၁-nodejs-မိတ်ဆက်)
-2. [NodeJS ကိုထည့်သွင်းခြင်း](./index.md#၂-nodejs-ကိုထည့်သွင်းခြင်း)
-3. [Project Directory ပြုလုပ်ခြင်း](./index.md#၃-project-directory-ပြုလုပ်ခြင်း)
-4. [VSCode အသုံးပြုခြင်း](./index.md#၄-vscode-အသုံးပြုခြင်း)
-5. [NodeJS အခြေခံ](./index.md#၅-nodejs-အခြေခံ)
-6. [ClientJS Env နှင့် NodeJS Env](./index.md#၆-clientjs-env-နှင့်-nodejs-env)
-7. [Module များခွဲထုတ်ရေးသားခြင်း](./index.md##၇-module-များခွဲထုတ်ရေးသားခြင်း)
+* [(၁) NodeJS မိတ်ဆက်](./index.md#၁-nodejs-မိတ်ဆက်)
+* [(၂) NodeJS ကိုထည့်သွင်းခြင်း](./index.md#၂-nodejs-ကိုထည့်သွင်းခြင်း)
+* [(၃) Project Directory ပြုလုပ်ခြင်း](./index.md#၃-project-directory-ပြုလုပ်ခြင်း)
+* [(၄) VSCode အသုံးပြုခြင်း](./index.md#၄-vscode-အသုံးပြုခြင်း)
+* [(၅) NodeJS အခြေခံ](./index.md#၅-nodejs-အခြေခံ)
+* [(၆) ClientJS Env နှင့် NodeJS Env](./index.md#၆-clientjs-env-နှင့်-nodejs-env)
+* [(၇) Module များခွဲထုတ်ရေးသားခြင်း](./index.md#၇-module-များခွဲထုတ်ရေးသားခြင်း)
 
 ### 📒 အပိုင်း (၂)
 
-8. [ExpressJS ထည့်သွင်းခြင်း](./part-2.md#၈-expressjs-ထည့်သွင်းခြင်း)
+* [(၈) ExpressJS ထည့်သွင်းခြင်း](./part-2.md#၈-expressjs-ထည့်သွင်းခြင်း)
 
 [👆 မာတိကာသို့](#မာတိကာ)
 
