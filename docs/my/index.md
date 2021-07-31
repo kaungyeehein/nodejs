@@ -12,13 +12,13 @@ Language: MY|[EN](../en/index.md)
 4. [VSCode အသုံးပြုခြင်း](./index.md#၄-vscode-အသုံးပြုခြင်း)
 5. [NodeJS အခြေခံ](./index.md#၅-nodejs-အခြေခံ)
 6. [ClientJS Env နှင့် NodeJS Env](./index.md#၆-clientjs-env-နှင့်-nodejs-env)
-7. [Module များခွဲထုတ်ရေးသားခြင်း](#၇-module-များခွဲထုတ်ရေးသားခြင်း)
-
-[👆 မာတိကာသို့](#မာတိကာ)
+7. [Module များခွဲထုတ်ရေးသားခြင်း](./index.md##၇-module-များခွဲထုတ်ရေးသားခြင်း)
 
 ### 📒 အပိုင်း (၂)
 
 8. [ExpressJS ထည့်သွင်းခြင်း](./part-2.md#၈-expressjs-ထည့်သွင်းခြင်း)
+
+[👆 မာတိကာသို့](#မာတိကာ)
 
 ---
 
