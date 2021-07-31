@@ -4,17 +4,25 @@ Language: MY|[EN](../en/index.md)
 
 ## မာတိကာ
 
-1. [NodeJS မိတ်ဆက်](#၁-nodejs-မိတ်ဆက်)
-2. [NodeJS ကိုထည့်သွင်းခြင်း](#၂-nodejs-ကိုထည့်သွင်းခြင်း)
-3. [Project Directory ပြုလုပ်ခြင်း](#၃-project-directory-ပြုလုပ်ခြင်း)
-4. [VSCode အသုံးပြုခြင်း](#၄-vscode-အသုံးပြုခြင်း)
-5. [NodeJS အခြေခံ](#၅-nodejs-အခြေခံ)
-6. [ClientJS Env နှင့် NodeJS Env](#၆-clientjs-env-နှင့်-nodejs-env)
+### 📒 အပိုင်း (၁)
+
+1. [NodeJS မိတ်ဆက်](./index.md#၁-nodejs-မိတ်ဆက်)
+2. [NodeJS ကိုထည့်သွင်းခြင်း](./index.md#၂-nodejs-ကိုထည့်သွင်းခြင်း)
+3. [Project Directory ပြုလုပ်ခြင်း](./index.md#၃-project-directory-ပြုလုပ်ခြင်း)
+4. [VSCode အသုံးပြုခြင်း](./index.md#၄-vscode-အသုံးပြုခြင်း)
+5. [NodeJS အခြေခံ](./index.md#၅-nodejs-အခြေခံ)
+6. [ClientJS Env နှင့် NodeJS Env](./index.md#၆-clientjs-env-နှင့်-nodejs-env)
 7. [Module များခွဲထုတ်ရေးသားခြင်း](#၇-module-များခွဲထုတ်ရေးသားခြင်း)
 
 [👆 မာတိကာသို့](#မာတိကာ)
 
+### 📒 အပိုင်း (၂)
+
+8. [ExpressJS ထည့်သွင်းခြင်း](./part-2.md#၈-expressjs-ထည့်သွင်းခြင်း)
+
 ---
+
+## ~~~ 📒 အပိုင်း (၁) ~~~
 
 ### (၁) NodeJS မိတ်ဆက်
 
@@ -59,7 +67,7 @@ npm -v
 node -v
 ```
 
-NodeJS ကို နောက်ဆုံး version သို့ မြှင့်တင်ချင်ပါက အောက်ပါအတိုင်း ပြုလုပ်နိုင်ပါသည်။
+NodeJS ကို နောက်ဆုံး version သို့ မြှင့်တင်ချင်ပါက အောက်ပါအတိုင်း ပြုလုပ်နိုင်ပါသည်။ အောက်ပါ command သည် MacOS တွင်ရေးသားသော ပုံစံဖြစ်၍ `sudo` ထည့်သွင်းထားခြင်း ဖြစ်ပါသည်။ WindowsOS တွင်မူ `sudo` ထည့်သွင်းစရာမလိုအပ်ပဲ Run as Administrator မှ command ကို run ကာ version မြှင့်တင်နိုင်ပါသည်။
 ```
 sudo npm i -g npm
 sudo npm i -g n
