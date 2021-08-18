@@ -87,7 +87,7 @@ app.get('/', (req, res) => {
 app.listen(3000, () => console.log('App listening on port 3000!'));
 ```
 View များထည့်သွင်းရန် `mkdir views` command ဖြင့် `views` ဟူသော directory တစ်ခုပြုလုပ်၍ ၎င်းထဲတွင် `home.ejs` file တစ်ခုကို အောက်ပါအတိုင်း ရေးထည့်ပါ။ Directory name ကို `views` ဟုမပေးဘဲ ကြိုက်နှစ်သက်ရာ နာမည်ပေးနိုင်ပါသည်။ ထိုသို့ပြုလုပ်လိုပါက `app.set('views', path.join(__dirname, 'views'));` ဖြင့် ကြေညှာပေးရမှာ ဖြစ်ပါသည်။ 
-```javascript
+```ejs
 // views/home.ejs
 <h1>
 Hello, <%= name %>
@@ -100,7 +100,7 @@ EJS စာမျက်နှာများကို layout တစ်ခုထ�
 npm i express-ejs-layouts
 ```
 Layouts package ကို ထည့်သွင်းပြီးပါက `app.js` တွင် `const expressLayouts = require('express-ejs-layouts')` ကိုထည့်သွင်းပြီး `app.use(expressLayouts);` ဖြင့် အသုံးပြုပေးရမည် ဖြစ်ပါသည်။ ထိုနောက် `layout.ejs` file အား views directory ထဲတွင် အောက်ပါအတိုင်း ပြုလုပ်ပါ။
-```javascript
+```ejs
 // views/layout.ejs
 <!DOCTYPE html>
 <html>
@@ -139,12 +139,12 @@ app.get('/', (req, res) => {
 app.listen(3000, () => console.log('App listening on port 3000!'));
 ```
 View များထည့်သွင်းရန် `mkdir views` command ဖြင့် `views` ဟူသော directory တစ်ခုပြုလုပ်၍ ၎င်းထဲတွင် `home.pug` file တစ်ခုကို အောက်ပါအတိုင်း ရေးထည့်ပါ။ Directory name ကို `views` ဟုမပေးဘဲ EJS မှာလို ကြိုက်နှစ်သက်ရာ နာမည်ပေးနိုင်ပါသည်။
-```javascript
+```pug
 // views/home.pug
 h1 Hello, #{name}
 ```
 ၎င်း application ကို run ကြည့်ပါက Hello, Kaung ဟူသော စာမျက်နှာအား မြင်ရမည် ဖြစ်ပါသည်။ Pug ရေးထုံးများကို အသေးစိတ်လေ့လာလိုပါက [pugjs.org (Language Reference)](https://pugjs.org/language/doctype.html) တွင် လေ့လာနိုင်ပါသည်။ ၎င်းတွင် Attributes, Case, Code, Comments, Conditionals, Doctype, Filters, Includes, Iteration, Mixins စသည်ဖြင့် လေ့လာစရာ ရေးပုံရေးနည်းများစွာ ရှိပါသည်။ Pug ၏ အဓိကအားသာချက်မှာ code အနည်းငယ်ရေးသားယုံဖြင့် HTML code များကို ပြည့်ပြည့်စုံစုံ ဖေါ်ပြပေးနိုင်ခြင်း ဖြစ်ပါသည်။ EJS မှာလို HTML code များကို အကုန်ရေးသားစရာ မလိုပဲ Pug က ၎င်း၏ template များကို အသုံးပြုကာ ဖေါ်ပြပေးသွားမှာ ဖြစ်ပါသည်။ ထိုအပြင် EJS မှာလိုပင် တူညီသော Header နှင့် Footer ကို views အောက်ရှိ common ဟူသော directory ထဲတွင် ခွဲထုတ်ရေးသားထားကာ include ဖြင့် ပြန်လည်ခေါ်ယူ ထားနိုင်ပါသည်။ အောက်ပါ code နမူနာကို ကြည့်ပါ။
-```javascript
+```pug
 // views/home.pug
 doctype html
 html
