@@ -10,13 +10,14 @@ Language: MY|[EN](../en/index.md)
 * [(၂) NodeJS ကိုထည့်သွင်းခြင်း](./index.md#၂-nodejs-ကိုထည့်သွင်းခြင်း)
 * [(၃) Project Directory ပြုလုပ်ခြင်း](./index.md#၃-project-directory-ပြုလုပ်ခြင်း)
 * [(၄) VSCode အသုံးပြုခြင်း](./index.md#၄-vscode-အသုံးပြုခြင်း)
-* [(၅) NodeJS အခြေခံ](./index.md#၅-nodejs-အခြေခံ)
-* [(၆) ClientJS Env နှင့် NodeJS Env](./index.md#၆-clientjs-env-နှင့်-nodejs-env)
+* [(၅) ClientJS Env နှင့် NodeJS Env](./index.md#၅-clientjs-env-နှင့်-nodejs-env)
+* [(၆) NodeJS အခြေခံ](./index.md#၆-nodejs-အခြေခံ)
 * [(၇) Module များခွဲထုတ်ရေးသားခြင်း](./index.md#၇-module-များခွဲထုတ်ရေးသားခြင်း)
 
 ### 📒 အပိုင်း (၂)
 
 * [(၈) ExpressJS ထည့်သွင်းခြင်း](./part-2.md#၈-expressjs-ထည့်သွင်းခြင်း)
+* [(၉) View Engine အသုံးပြုခြင်း](./part-2.md#၉-view-engine-အသုံးပြုခြင်း)
 
 [👆 မာတိကာသို့](#မာတိကာ)
 
@@ -114,6 +115,7 @@ VScode ကိုထည့်သွင်းရန် [https://code.visualstudio.
 * DotENV (DotENV file ကိုရေးရာတွင် code highlight လုပ်ရန်)
 * REST Client (REST API ရေးရာတွင် code များကို VScode ထဲတွင် စစ်ဆေးနိုင်ရန်)
 * ESLint (Code syntax များ စစ်ဆေးရန်)
+* Atom One Dark Theme (Atom Editor ကဲ့သို့ code highlight ပြုလုပ်ရန်)
 
 စသည်ဖြင့် အသုံးဝင်သော extensions ပေါင်းများစွာရှိပါသည်။ အခြားလိုအပ်သော extensions များလည်း ရှာဖွေထည့်သွင်း အသုံးပြုနိုင်ပါသည်။
 
@@ -129,7 +131,23 @@ code .
 
 ---
 
-### (၅) NodeJS အခြေခံ
+### (၅) ClientJS Env နှင့် NodeJS Env
+
+JavaScript language တစ်ခုထဲ အသုံးပြုပေမဲ့ သုံးတဲ့ environment ပေါ်မှာ မူတည်ပြီး အသုံးပြုပုံ ကွဲပြားတာကို သတိပြုရမည် ဖြစ်ပါသည်။
+
+#### ClientJS Environment
+
+Browser တွင် JavaScript များ အသုံးပြုရာတွင် main object အနေဖြင့် `window` ကိုအသုံးပြုရမည်ဖြစ်ပြီး၊ နာမူနာအားဖြင့် `window.alert()` ၊ `window.document` စသည်ဖြင့် အသုံးပြုရပါသည်။ သို့သော် window အားထည့်မရေးလည်း browser များက auto နားလည်ကြပါသည်။ `window` object သည် client side environment တွင် top level object ဖြစ်ပြီး၊ ၎င်းထဲတွင် လိုအပ်သော properties တွေနဲ့ method တွေရှိပါတယ်။ ဥပမာ Chrome Browser တွင် (command+option+I) ကိုနှိပ်၍ Developer Tools ကိုဖွင့်လိုက်ပါ။ ၎င်း Tools မှ Console တွင် `window` ဟု ရိုက်၍ enter နှိပ်လိုက်ပါက ၎င်း window object ထဲမှရှိသမျှ အားလုံး မြင်ရမှာ ဖြစ်ပါသည်။ `document` ကို ရိုက်ပါက ယခု web apge ၏ elements များအားလုံး ကို မြင်တွေ့ရမှာ ဖြစ်ပါသည်။
+
+#### NodeJS Environment
+
+NodeJS တွင် JavaScript ကို အသုံးပြုရာတွင် main object အနေဖြင့် `global` object ဖြစ်ပြီး client side JavaScript က `window` object နဲ့ဆင်တူပြီး၊ NodeJS မှာသုံးလို့ရတဲ့ properties တွေနဲ့ method တွေရှိပါတယ်။ ၎င်း `global` object ထဲတွင်ရှိသသော `process` object သည် client side JavaScript က `document` object နဲ့ဆင်တူပါသည်။ ၎င်းထဲတွင် module များ၊ config များ၊ environment setting များ စသည်ဖြင့် ပါဝင်ပါသည်။ command line တွင် `node` ဟုရိုက်ထည့်ပါ၊ ထိုနောက် `global` သို့မဟုတ် `process` ဟုရိုက်ထည့်ပြီး စမ်းသပ်ကြည့်ပါက မြင်ရမှာ ဖြစ်ပါသည်။ ထိုကြောင့် NodeJS သည် JavaScript language ဖြစ်သော်လည်း client side JavaScript နှင့် အနည်းငယ်ကွဲပြားခြားနားကြောင်း မှတ်သားထားရမည် ဖြစ်ပါသည်။
+
+[👆 မာတိကာသို့](#မာတိကာ)
+
+---
+
+### (၆) NodeJS အခြေခံ
 
 NodeJS တွင် အရေးပါသော လုပ်ဆောင်ချက်မှာ Non-blocking I/O ဖြစ်ပါတယ်။ JavaScript သည် single threaded ပေါ်တွင် parallel processing ပြုလုပ်နိုင်သော language ဖြစ်သည်။ ပထမ အလုပ် ပြီးမြောက်အောင် စောင့်စရာမလိုပဲ မပြီးခင်မှာ ဒုတိယ အလုပ်ကို ဆက်လက် လုပ်ဆောင်နိုင်ခြင်းဖြစ်သည်။ ဥပမာ Network ပေါ်က အကြောင်းအရာ တစ်ခုခုကို တောင်းဆိုနေချိန်တွင် အခြားအလုပ်များကို ဆက်လက်လုပ်ဆောင် နိုင်ခြင်းဖြစ်သည်။ ထိုသို့ပုံစံများကို JavaScript တွင် callback function များဖြင့် ရေးသားနိုင်ပါသည်။ အောက်ပါ နာမူနာ code ကို ကြည့်ပါ။
 
@@ -281,22 +299,6 @@ fs.open('/Users/joe/test.txt', 'r', (err, fd) => {
 
 * [https://nodejs.dev/learn](https://nodejs.dev/learn)
 * [https://nodeschool.io/](https://nodeschool.io/)
-
-[👆 မာတိကာသို့](#မာတိကာ)
-
----
-
-### (၆) ClientJS Env နှင့် NodeJS Env
-
-JavaScript language တစ်ခုထဲ အသုံးပြုပေမဲ့ သုံးတဲ့ environment ပေါ်မှာ မူတည်ပြီး အသုံးပြုပုံ ကွဲပြားတာကို သတိပြုရမည် ဖြစ်ပါသည်။
-
-#### ClientJS Environment
-
-Browser တွင် JavaScript များ အသုံးပြုရာတွင် main object အနေဖြင့် `window` ကိုအသုံးပြုရမည်ဖြစ်ပြီး၊ နာမူနာအားဖြင့် `window.alert()` ၊ `window.document` စသည်ဖြင့် အသုံးပြုရပါသည်။ သို့သော် window အားထည့်မရေးလည်း browser များက auto နားလည်ကြပါသည်။ `window` object သည် client side environment တွင် top level object ဖြစ်ပြီး၊ ၎င်းထဲတွင် လိုအပ်သော properties တွေနဲ့ method တွေရှိပါတယ်။ ဥပမာ Chrome Browser တွင် (command+option+I) ကိုနှိပ်၍ Developer Tools ကိုဖွင့်လိုက်ပါ။ ၎င်း Tools မှ Console တွင် `window` ဟု ရိုက်၍ enter နှိပ်လိုက်ပါက ၎င်း window object ထဲမှရှိသမျှ အားလုံး မြင်ရမှာ ဖြစ်ပါသည်။ `document` ကို ရိုက်ပါက ယခု web apge ၏ elements များအားလုံး ကို မြင်တွေ့ရမှာ ဖြစ်ပါသည်။
-
-#### NodeJS Environment
-
-NodeJS တွင် JavaScript ကို အသုံးပြုရာတွင် main object အနေဖြင့် `global` object ဖြစ်ပြီး client side JavaScript က `window` object နဲ့ဆင်တူပြီး၊ NodeJS မှာသုံးလို့ရတဲ့ properties တွေနဲ့ method တွေရှိပါတယ်။ ၎င်း `global` object ထဲတွင်ရှိသသော `process` object သည် client side JavaScript က `document` object နဲ့ဆင်တူပါသည်။ ၎င်းထဲတွင် module များ၊ config များ၊ environment setting များ စသည်ဖြင့် ပါဝင်ပါသည်။ command line တွင် `node` ဟုရိုက်ထည့်ပါ၊ ထိုနောက် `global` သို့မဟုတ် `process` ဟုရိုက်ထည့်ပြီး စမ်းသပ်ကြည့်ပါက မြင်ရမှာ ဖြစ်ပါသည်။ ထိုကြောင့် NodeJS သည် JavaScript language ဖြစ်သော်လည်း client side JavaScript နှင့် အနည်းငယ်ကွဲပြားခြားနားကြောင်း မှတ်သားထားရမည် ဖြစ်ပါသည်။
 
 [👆 မာတိကာသို့](#မာတိကာ)
 
