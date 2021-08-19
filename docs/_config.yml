@@ -1,3 +1,4 @@
 theme: jekyll-theme-cayman
 show_downloads: true
-highlight: github
+kramdown:
+  syntax_highlighter: github
