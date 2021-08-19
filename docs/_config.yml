@@ -2,7 +2,7 @@ theme: jekyll-theme-cayman
 show_downloads: true
 
 markdown: kramdown
-highlighter: none
+highlighter: rouge-base16-dark
 kramdown:
-  syntax_highlighter_opts:
-    disable : true
+  input: GFM
+  syntax_highlighter: rouge-base16-dark
