@@ -57,7 +57,11 @@ ExpressJS သွင်းတုန်းကနှင့် မတူသည်မ
     "start": "nodemon index.js"
   }
 ```
-Application ကို စမ်းကြည့်ရန် terminal တွင် `npm start` ဟုရိုက်ထည့်ပါက `nodemon` ကိုမြင်ရမည် ဖြစ်ပြီး၊ JavaScript file တွင် တစ်ခုခု အပြောင်းအလဲ လုပ်ပါက application အား auto restart ပြုလုပ်သွားမည် ဖြစ်ပါသည်။
+Application ကို စမ်းကြည့်ရန် terminal တွင် `npm start` ဟုရိုက်ထည့်ပါက `nodemon` ကိုမြင်ရမည် ဖြစ်ပြီး၊ JavaScript file တွင် တစ်ခုခု အပြောင်းအလဲ လုပ်ပါက application အား auto restart ပြုလုပ်သွားမည် ဖြစ်ပါသည်။ `nodemon` ကို local project directory ထဲမှာ install မလုပ်ပဲ globally install ပြုလုပ်ပါက မည်သည့် prject ကမဆို ခေါ်ယူအသုံးပြုနိုင်မှာ ဖြစ်ပါသည်။ globally install ပြုလုပ်လိုပါက `-g` option ထည့်၍ သွင်းရမည် ဖြစ်ပါသည်။
+```
+sudo npm i -D -g nodemon
+```
+Globally install ပြုလုပ်ပါက Windows တွင် `sudo` မလိုအပ်သော်လည်း Mac နှင့် Linux OS တွင်မူ ထည့်သွင်းပေးမှ permision ရမည် ဖြစ်ပါသည်။ ထိုသို့ ထည့်သွင်းပြီးပါက project directory ထဲတွင် `nodemon` ဟု terminal ကနေရိုက်ထည့်က အသုံးပြုနိုင်မည် ဖြစ်ပါသည်။
 
 [👆 မာတိကာသို့](#မာတိကာ)
 
@@ -150,7 +154,7 @@ h1 Hello, #{name}
 doctype html
 html
     head
-        title Pug Layout
+        title Pug Home
     body
         include common/header
         h1 Hello, #{name}
@@ -170,6 +174,28 @@ html
     </body>
 </html>
 ```
+
+Pug တွင် EJS မှာကဲ့သို့ layout ကိုအသုံးပြုလိုပါက သီးခြားထည့်သွင်းစရာမလိုအပ်ပါ။ ထိုသို့အသုံးပြုရန် `layout.pug` file တွင် အောက်ပါအတိုင်း ရေးသားရပါမည်။ layout တွင် အစားထိုးဝင်ရောက်လာမည် code များနေရာတွင် `block content` ဟု သက်မှတ်ပေးရမည် ဖြစ်ပါသည်။
+```pug
+// views/layout.pug
+doctype html
+html
+    head
+        title Pug Layout
+    body
+        include common/header
+        block content
+        include common/footer
+```
+ထိုနောက် `home.pug` file အား အောက်ပါအတိုင် ပြင်ဆင်ရေးသား ရမည် ဖြစ်ပါသည်။ အသုံးပြုလိုသော layout ကို `extends` ဖြင့် ခေါ်ယူထားပြီး၊ layout တွင် အစားထိုးမည့် code နေရာတွင် `block content` ဖြင့် သက်မှတ်ထားရပါမည်။ 
+```pug
+// views/home.pug
+extends layout 
+
+block content
+    h1 Hello, #{name}
+```
+ထိုသို့ template ကိုအသုံးပြုပြီး ရေးသားပါကလည်း အပေါ်က HTML code အတိုင်းပင် ထွက်လာမှာ ဖြစ်ပါတယ်။ 
 
 [👆 မာတိကာသို့](#မာတိကာ)
 
