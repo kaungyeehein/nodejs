@@ -47,6 +47,8 @@ app.listen(3000);
 ```
 ၎င်း application ကို run ရန် terminal ထဲတွင် `node index.js` ဟုရိုက်ထည့်ပြီး၊ web browser ကနေ `http://localhost:3000` ဟုရှာကြည့်ပါက 'Hello World!' ဟူသော ပထမဦးဆုံး application စမ်းသပ်တာကို မြင်ရမှ ဖြစ်ပါသည်။ Project ထဲတွင် install ပြုလုပ်ထားသော ExpressJS အား index.js ၏ ပထမဦးဆုံး စာကြောင်းတွင် require ပြုလုပ်ထားသည်မှာ ၎င်း module အား import ပြုလုပ်ထားခြင်း ဖြစ်ပါသည်။ ထိုနောက် express application အား initalize ပြုလုပ်ထားပါသည်။ application ၏ root အားခေါ်ပါက အလုပ်လုပ်မည့် callback function အားရေးထားပြီး၊ ၎င်း callback ထဲတွင် request, response နဲ့ next ဟူသော parameter များလက်ခံ ဆောင်ရွက်ထားသည်ကို တွေ့ရမည် ဖြစ်ပါသည်။ နောက်ဆုံးတွင် port အမှတ် 3000 တွင် application အားလက်ခံ ဆောင်ရွက်မည် ဟု ကြေညှာထားခြင်း ဖြစ်ပါသည်။
 
+#### Nodemon
+
 NodeJS application ၏ `index.js` တွင် တစ်ခုခုပြောင်းလဲချင်ပါက NodeJS application ကို ရပ်၍ ပြန်လည်စတင်ရပါသည်။ ထိုအရာကို အလိုအလျှောက် ပြုလုပ်လိုပါက နောက်ထပ် မဖြစ်မနေ ထည့်သွင်းသင့်တဲ့ module ကတော့ `nodemon` ဖြစ်ပါတယ်။ `nodemon` ကိုထည့်သွင်းရန် terminal ထဲတွင် အောက်ပါအတိုင်း ရိုက်ထည့်ပါ။
 ```
 npm i -D nodemon
@@ -62,6 +64,15 @@ Application ကို စမ်းကြည့်ရန် terminal တွင်
 sudo npm i -D -g nodemon
 ```
 Globally install ပြုလုပ်ပါက Windows တွင် `sudo` မလိုအပ်သော်လည်း Mac နှင့် Linux OS တွင်မူ ထည့်သွင်းပေးမှ permision ရမည် ဖြစ်ပါသည်။ ထိုသို့ ထည့်သွင်းပြီးပါက project directory ထဲတွင် `nodemon` ဟု terminal ကနေရိုက်ထည့်က အသုံးပြုနိုင်မည် ဖြစ်ပါသည်။
+
+#### Body-Parser
+
+Request Body တွင်ပါသော data များကို Javascript Object အဖြစ် ပြောင်းလည်းပေးရန် သို့မဟုတ် Json Object အဖြစ် ပြောင်းလည်းပေးရန် `body-parser` ကိုအသုံးပြုရပါသည်။ Express v4 မှစတင်ကာ `body-parser` ကို Express တွင် တစ်ခါတည်း ထည့်သွင်းပေးထားပါသည်။ သည်းခြားထည့်သွင်းရန် မလိုအပ်တော့ပါ။ အသုံးပြုပုံမှာ အောက်ပါအတိုင်း middleware များထည့်သွင်း သလို `use` function ကိုအသုံးပြုရမည် ဖြစ်ပါသည်။
+```javascript
+// middlewares
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+```
 
 [👆 မာတိကာသို့](#မာတိကာ)
 
