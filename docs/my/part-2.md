@@ -67,11 +67,18 @@ Globally install ပြုလုပ်ပါက Windows တွင် `sudo` မ�
 
 #### Body-Parser
 
-Request Body တွင်ပါသော data များကို Javascript Object အဖြစ် ပြောင်းလည်းပေးရန် သို့မဟုတ် Json Object အဖြစ် ပြောင်းလည်းပေးရန် `body-parser` ကိုအသုံးပြုရပါသည်။ Express v4 မှစတင်ကာ `body-parser` ကို Express တွင် တစ်ခါတည်း ထည့်သွင်းပေးထားပါသည်။ သည်းခြားထည့်သွင်းရန် မလိုအပ်တော့ပါ။ အသုံးပြုပုံမှာ အောက်ပါအတိုင်း middleware များထည့်သွင်း သလို `use` function ကိုအသုံးပြုရမည် ဖြစ်ပါသည်။
+Request Body တွင်ပါသော data များကို Javascript Object အဖြစ် ပြောင်းလည်းပေးရန် သို့မဟုတ် Json Object အဖြစ် ပြောင်းလည်းပေးရန် `body-parser` ကိုအသုံးပြုရပါသည်။ ExpressJS v4 မှစတင်ကာ `body-parser` ကို ExpressJS တွင် တစ်ခါတည်း ထည့်သွင်းပေးထားပါသည်။ သည်းခြားထည့်သွင်းရန် မလိုအပ်တော့ပါ။ အသုံးပြုပုံမှာ အောက်ပါအတိုင်း middleware များထည့်သွင်း သလို `use` function ကိုအသုံးပြုရမည် ဖြစ်ပါသည်။
 ```javascript
 // middlewares
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+```
+
+#### Static
+
+Client side တွင်အသုံးပြုရန် Bootstrap၊ JQuery တို့အတွက် CSS၊ Javascript များကို ထားရန် statis directory ကိုပြုလုပ်ထားရမည် ဖြစ်ပါသည်။ ထိုသို့ ပြုလုပ်ရန် ExpressJS ၏ static function ကို အသုံးပြု၍ အောက်ပါအတိုင်း ကြေညှာရမှာ ဖြစ်ပါသည်။ ၎င်း public directory ထဲတွင် မည်သည့် static files များကို မဆို ထည့်သွင်းထားနိုင်မည် ဖြစ်ပါသည်။
+```javascript
+app.use(express.static('./public'));
 ```
 
 [👆 မာတိကာသို့](#မာတိကာ)
