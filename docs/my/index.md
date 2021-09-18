@@ -137,7 +137,7 @@ JavaScript language တစ်ခုထဲ အသုံးပြုပေမဲ�
 
 #### ClientJS Environment
 
-Browser တွင် JavaScript များ အသုံးပြုရာတွင် main object အနေဖြင့် `window` ကိုအသုံးပြုရမည်ဖြစ်ပြီး၊ နာမူနာအားဖြင့် `window.alert()` ၊ `window.document` စသည်ဖြင့် အသုံးပြုရပါသည်။ သို့သော် window အားထည့်မရေးလည်း browser များက auto နားလည်ကြပါသည်။ `window` object သည် client side environment တွင် top level object ဖြစ်ပြီး၊ ၎င်းထဲတွင် လိုအပ်သော properties တွေနဲ့ method တွေရှိပါတယ်။ ဥပမာ Chrome Browser တွင် (command+option+I) ကိုနှိပ်၍ Developer Tools ကိုဖွင့်လိုက်ပါ။ ၎င်း Tools မှ Console တွင် `window` ဟု ရိုက်၍ enter နှိပ်လိုက်ပါက ၎င်း window object ထဲမှရှိသမျှ အားလုံး မြင်ရမှာ ဖြစ်ပါသည်။ `document` ကို ရိုက်ပါက ယခု web apge ၏ elements များအားလုံး ကို မြင်တွေ့ရမှာ ဖြစ်ပါသည်။
+Browser တွင် JavaScript များ အသုံးပြုရာတွင် main object အနေဖြင့် `window` ကိုအသုံးပြုရမည်ဖြစ်ပြီး၊ နာမူနာအားဖြင့် `window.alert()` ၊ `window.document` စသည်ဖြင့် အသုံးပြုရပါသည်။ သို့သော် window အားထည့်မရေးလည်း browser များက auto နားလည်ကြပါသည်။ `window` object သည် client side environment တွင် top level object ဖြစ်ပြီး၊ ၎င်းထဲတွင် လိုအပ်သော properties တွေနဲ့ method တွေရှိပါတယ်။ ဥပမာ Chrome Browser တွင် (command+option+I) ကိုနှိပ်၍ Developer Tools ကိုဖွင့်လိုက်ပါ။ ၎င်း Tools မှ Console တွင် `window` ဟု ရိုက်၍ enter နှိပ်လိုက်ပါက ၎င်း window object ထဲမှရှိသမျှ အားလုံး မြင်ရမှာ ဖြစ်ပါသည်။ `document` ကို ရိုက်ပါက ယခု web page ၏ elements များအားလုံး ကို မြင်တွေ့ရမှာ ဖြစ်ပါသည်။
 
 #### NodeJS Environment
 
