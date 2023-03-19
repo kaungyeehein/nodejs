@@ -23,6 +23,10 @@ Language: MY|[EN](../en/part-2.md)
 * [(၁၂) Express Messages (To be continue)](./part-2.md)
 * [(၁၃) Connnect Flash (To be continue)](./part-2.md)
 
+### 📒 အပိုင်း (၃)
+
+* [(၀) Scheduler Jobs ထည့်သွင်းခြင်း](./part-3.md)
+
 [👆 မာတိကာသို့](#မာတိကာ)
 
 ---
