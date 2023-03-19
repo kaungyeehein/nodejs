@@ -19,6 +19,10 @@ Language: MY|[EN](../en/index.md)
 * [(၈) ExpressJS ထည့်သွင်းခြင်း](./part-2.md#၈-expressjs-ထည့်သွင်းခြင်း)
 * [(၉) View Engine အသုံးပြုခြင်း](./part-2.md#၉-view-engine-အသုံးပြုခြင်း)
 
+### 📒 အပိုင်း (၃)
+
+* [(၀) Scheduler Jobs ထည့်သွင်းခြင်း](./part-3.md)
+
 [👆 မာတိကာသို့](#မာတိကာ)
 
 ---
